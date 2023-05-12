@@ -90,7 +90,7 @@ class RecipeCard extends HTMLElement {
         color: #70757A;
         font-size: 12px;
       }
-    `
+    `;
     // A5. TODO - Append the <style> and <article> elements to the Shadow DOM
     this.shadowRoot.appendChild(style);
     this.shadowRoot.appendChild(article);
@@ -129,7 +129,7 @@ class RecipeCard extends HTMLElement {
     //           literals (tempalte strings) and element.innerHTML for this.
     article.innerHTML = `
       <img src="${data.imgSrc}"
-      alt="Recipe Title">
+      alt="${data.imgAlt}">
       <p class="title">
         <a href="${data.titleLnk}">${data.titleTxt}</a>
       </p>
@@ -143,7 +143,7 @@ class RecipeCard extends HTMLElement {
       <p class="ingredients">
         ${data.ingredients}
       </p>
-  `
+  `;
   }
 }
 
